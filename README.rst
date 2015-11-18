@@ -39,6 +39,6 @@ Credentials *(passwords set at first boot)*
 -  Webmin, SSH, MySQL, Adminer: username **root**
 
 
-.. _Laravel: http://http://laravel.com
+.. _Laravel: http://laravel.com
 .. _TurnKey Core: https://www.turnkeylinux.org/core
 .. _Adminer: http://www.adminer.org
