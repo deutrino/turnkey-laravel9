@@ -1,7 +1,11 @@
-Laravel - PHP Framework
-=======================
+Laravel - PHP Framework for Web Artisans
+========================================
 
-`Laravel`_ is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+`Laravel`_ is a web application framework with expressive, elegant syntax. We
+believe development must be an enjoyable, creative experience to be truly
+fulfilling. Laravel attempts to take the pain out of development by easing
+common tasks used in the majority of web projects, such as authentication,
+routing, sessions, and caching.
 
 This appliance includes all the standard features in `TurnKey Core`_, and on top of that:
 
