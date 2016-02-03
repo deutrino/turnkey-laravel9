@@ -19,16 +19,13 @@ This appliance includes all the standard features in `TurnKey Core`_, and on top
 - Postfix MTA (bound to localhost) to allow sending of email (e. g. password recovery).
 - Webmin modules for configuring Apache2, PHP, MySQL and Postfix.
 
+Usage
+-----
 
-How to use Laravel
--------------------------------------------
-
-To update Laravel:
+Update Laravel::
 
     cd /var/www/laravel
-    
     composer self-update
-    
     composer update
 
 Laravel Documentation: http://laravel.com/docs/5.1
