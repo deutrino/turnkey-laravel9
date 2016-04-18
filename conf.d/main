@@ -10,9 +10,6 @@ DB_NAME=laravel
 DB_USER=laravel
 DB_PASS=$(mcookie)
 
-# Download Composer
-curl -sS https://getcomposer.org/installer | php -- --filename=composer --install-dir=/usr/local/bin
-
 # Download Laravel
 composer create-project laravel/laravel $WEBROOT $VERSION --prefer-dist
 
