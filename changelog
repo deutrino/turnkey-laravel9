@@ -1,3 +1,14 @@
+turnkey-laravel-14.2 (1) turnkey; urgency=low
+
+  * Installed security updates.
+
+  * Includes the latest stable version of Laravel (5.4).
+
+  * Note: Please refer to turnkey-core's changelog for changes common to all
+    appliances. Here we only describe changes specific to this appliance.
+
+ -- Anton Pyrogovskyi <anton@turnkeylinux.org>  Sun, 14 May 2017 00:50:47 +0200
+
 turnkey-laravel-14.1 (1) turnkey; urgency=low
 
   * Installed security updates.
