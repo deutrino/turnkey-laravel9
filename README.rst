@@ -33,7 +33,8 @@ Laravel Documentation: http://laravel.com/docs/5.1
 Credentials *(passwords set at first boot)*
 -------------------------------------------
 
--  Webmin, SSH, MySQL, Adminer: username **root**
+-  Webmin, SSH, MySQL: username **root**
+-  Adminer: username **adminer**
 
 
 .. _Laravel: http://laravel.com
