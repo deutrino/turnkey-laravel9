@@ -14,7 +14,7 @@ turnkey-laravel-15.0 (1) turnkey; urgency=low
 
   * Updated PHP default settings
 
-  * Remove phpsh (no longer maintained)  * Install Admi
+  * Remove phpsh (no longer maintained)
 
   * Note: Please refer to turnkey-core's changelog for changes common to all
     appliances. Here we only describe changes specdific to this appliance.
