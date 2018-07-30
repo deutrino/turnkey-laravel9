@@ -17,7 +17,7 @@ turnkey-laravel-15.0 (1) turnkey; urgency=low
   * Remove phpsh (no longer maintained)
 
   * Note: Please refer to turnkey-core's changelog for changes common to all
-    appliances. Here we only describe changes specdific to this appliance.
+    appliances. Here we only describe changes specific to this appliance.
 
  -- Vlad Kuzmenko <vlad.work.here@gmail.com>  Fri, 24 Nov 2017 05:43:42 +0200
 
