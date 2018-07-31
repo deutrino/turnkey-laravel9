@@ -28,7 +28,7 @@ Update Laravel::
     composer self-update
     composer update
 
-Laravel Documentation: http://laravel.com/docs/5.1
+Laravel Documentation: https://laravel.com/docs/5.5
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
@@ -37,6 +37,6 @@ Credentials *(passwords set at first boot)*
 -  Adminer: username **adminer**
 
 
-.. _Laravel: http://laravel.com
+.. _Laravel: https://laravel.com
 .. _TurnKey Core: https://www.turnkeylinux.org/core
-.. _Adminer: http://www.adminer.org
+.. _Adminer: https://www.adminer.org
