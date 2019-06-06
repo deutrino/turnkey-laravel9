@@ -1,3 +1,11 @@
+turnkey-laravel-15.2 (1) turnkey; urgency=low
+
+  * Update to latest upstream version (5.8.16)
+
+  * Updated PHP to 7.2
+
+ -- Stefan Davis <stefan@turnkeylinux.org>  Wed, 15 May 2019 01:10:46 +0000
+
 turnkey-laravel-15.1 (1) turnkey; urgency=low
 
   * Rebuild to resolve inadvertant removal of mariadb during sec-updates
