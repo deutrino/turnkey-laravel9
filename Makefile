@@ -1,4 +1,4 @@
-PHP_VERSION=7.2
+PHP_VERSION=7.3
 
 include $(FAB_PATH)/common/mk/turnkey/lamp.mk
 include $(FAB_PATH)/common/mk/turnkey.mk

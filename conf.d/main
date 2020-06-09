@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-VERSION='5.8.16'
+VERSION='6.18.8'
 
 SRC=/usr/local/src
 NAME=laravel
