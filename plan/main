@@ -1,7 +1,6 @@
 #include <turnkey/base>
-#include <turnkey/lamp72>
+#include <turnkey/lamp>
 
 php-pear
-php7.2-xsl
-php-mcrypt
-php7.2-mbstring
+php-xml
+php-mbstring
