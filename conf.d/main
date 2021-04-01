@@ -1,6 +1,6 @@
-#!/bin/sh -ex
+#!/bin/bash -ex
 
-VERSION='6.18.8'
+VERSION='6.20.0'
 
 SRC=/usr/local/src
 NAME=laravel
@@ -21,11 +21,8 @@ done
 service mysql start
 
 # setup the database
-MYSQL_BATCH="mysql --user=root --password=$MYSQL_PASS --batch"
-MYSQL_ADMIN="mysqladmin --user=root --password=$MYSQL_PASS"
-
-$MYSQL_ADMIN create $DB_NAME
-$MYSQL_BATCH --execute "grant all privileges on $DB_NAME.* to $DB_USER@localhost identified by '$DB_PASS'; flush privileges;"
+mysqladmin create $DB_NAME
+mysql --batch --execute "grant all privileges on $DB_NAME.* to $DB_USER@localhost identified by '$DB_PASS'; flush privileges;"
 
 # stop mysql server
 service mysql stop
@@ -40,4 +37,3 @@ sed -i "s|'database'.*|'database' => '$DB_NAME',|" $WEBROOT/config/database.php
 sed -i "s|'username'.*|'username' => '$DB_USER',|" $WEBROOT/config/database.php
 sed -i "s|'password'.*|'password' => '$DB_PASS',|" $WEBROOT/config/database.php
 sed -i "s|\\(<div class=\"quote\">{{ Inspiring::quote() }}</div>\\)|\1<div><h5>Laravel was installed with <a href=\"http://turnkeylinux.org\">TurnKey Linux</a>.</h5></div>|" $WEBROOT/resources/views/welcome.blade.php
-
