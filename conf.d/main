@@ -11,11 +11,9 @@ DB_USER=laravel
 DB_PASS=$(mcookie)
 
 # Download Laravel
-composer create-project laravel/laravel $WEBROOT $VERSION --prefer-dist
-
-for i in storage bootstrap/cache; do
-    chown -R www-data:www-data $WEBROOT/$i
-done
+mkdir -p $WEBROOT
+chown -R www-data:www-data $WEBROOT
+turnkey-composer create-project laravel/laravel $WEBROOT $VERSION --prefer-dist
 
 # start mysql server
 service mysql start
