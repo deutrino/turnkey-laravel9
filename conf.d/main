@@ -1,6 +1,9 @@
 #!/bin/bash -ex
 
-VERSION='6.20.0'
+# when updating, change LTS version here & also update doc link in README
+LTS=v6
+version=$(gh_releases laravel/laravel | grep -vi "beta\|rc" | grep $LTS | tail -1)
+VERSION="${version#v}"
 
 SRC=/usr/local/src
 NAME=laravel
@@ -13,7 +16,10 @@ DB_PASS=$(mcookie)
 # Download Laravel
 mkdir -p $WEBROOT
 chown -R www-data:www-data $WEBROOT
-turnkey-composer create-project laravel/laravel $WEBROOT $VERSION --prefer-dist
+turnkey-composer create-project laravel/laravel $WEBROOT $VERSION --prefer-dist --keep-vcs
+
+# Ensure that turnkey-artisan knows where webroot is
+sed -i "\|^export WEBROOT| s|=.*|="$WEBROOT"|" /usr/local/bin/turnkey-artisan
 
 # start mysql server
 service mysql start
@@ -30,8 +36,13 @@ a2dissite 000-default
 a2ensite laravel
 a2enmod rewrite
 
-# setup laravel configuration
-sed -i "s|'database'.*|'database' => '$DB_NAME',|" $WEBROOT/config/database.php
-sed -i "s|'username'.*|'username' => '$DB_USER',|" $WEBROOT/config/database.php
-sed -i "s|'password'.*|'password' => '$DB_PASS',|" $WEBROOT/config/database.php
-sed -i "s|\\(<div class=\"quote\">{{ Inspiring::quote() }}</div>\\)|\1<div><h5>Laravel was installed with <a href=\"http://turnkeylinux.org\">TurnKey Linux</a>.</h5></div>|" $WEBROOT/resources/views/welcome.blade.php
+# Set Laravel configuration
+sed -i '\|^APP_NAME=| s|=.*|="TurnKey Laravel"|' $WEBROOT/.env
+sed -i "\|^DB_USERNAME=|=.*|=$DB_USER|" $WEBROOT/.env
+sed -i "\|^DB_PASSWORD=| s|=.*|=$DB_PASS|" $WEBROOT/.env
+
+# tweak laravel landing page
+WELCOME=$WEBROOT/resources/views/welcome.blade.php
+sed -i "\|laravel.com/docs| s|docs|docs/${VERSION%%.*}.x|" $WELCOME
+sed -i '\|class="links"|a \                    HERE' $WELCOME
+sed -i 's|HERE|<a href="https://www.turnkeylinux.org/laravel">TurnKey</a>|' $WELCOME
