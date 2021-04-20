@@ -4,3 +4,4 @@
 php-pear
 php-xml
 php-mbstring
+php-curl
