@@ -11,8 +11,10 @@ This appliance includes all the standard features in `TurnKey Core`_, and on top
 
 - Laravel 
   
-   - Installed from upstream source to /var/www/laravel
-   - Composer globally installed for all your projects
+   - Latest LTS_ release installed via composer_ to /var/www/laravel.
+   - Composer_ globally installed for all your projects.
+   - Includes turnkey-composer_ and turnkey-artisan_ (wrapper scripts which
+     run composer_ and artisan_ respectively; as www-data user).
 
 - SSL support out of the box.
 - `Adminer`_ administration frontend for MySQL (listening on port 12322 - uses SSL).
@@ -22,13 +24,18 @@ This appliance includes all the standard features in `TurnKey Core`_, and on top
 Usage
 -----
 
+`Laravel Documentation`_
+
 Update Laravel::
 
     cd /var/www/laravel
+    # update composer
     composer self-update
-    composer update
+    # update laravel build
+    turnkey-composer update
 
-Laravel Documentation: https://laravel.com/docs/5.5
+If you wish to update to a newer release of Laravel (i.e. not the currently
+installed LTS) then please consult the `Laravel Upgrade Documentation`_.
 
 Credentials *(passwords set at first boot)*
 -------------------------------------------
@@ -39,4 +46,11 @@ Credentials *(passwords set at first boot)*
 
 .. _Laravel: https://laravel.com
 .. _TurnKey Core: https://www.turnkeylinux.org/core
+.. _LTS: https://laravel.com/docs/releases#support-policy
+.. _composer: https://getcomposer.org/
+.. _turnkey-composer: https://github.com/turnkeylinux/common/blob/master/overlays/composer/usr/local/bin/turnkey-composer
+.. _artisan: https://laravel.com/docs/artisan
+.. _turnkey-artisan: https://github.com/turnkeylinux/common/blob/master/overlays/artisan/usr/local/bin/turnkey-artisan
 .. _Adminer: https://www.adminer.org
+.. _Laravel Documentation: https://laravel.com/docs/6.x
+.. _Laravel Upgrade Documentation: https://laravel.com/docs/upgrade

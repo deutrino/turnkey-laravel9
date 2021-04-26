@@ -1,3 +1,28 @@
+turnkey-laravel-16.1 (1) turnkey; urgency=low
+
+  * Update to Laravel to latest LTS version - 6.20.0.
+
+  * Update Composer to 2.0.12.
+
+  * Include 'turnkey-composer' wrapper script - runs composer as www-data
+    user. Makes it easy to not run composer as root - part of #1539.
+
+  * Include 'turnkey-artisan' wrapper script - similar to turnkey-composer;
+    runs 'php artisan' as www-data user.
+
+  * Include php-curl package (composer runs faster with this installed).
+
+  * Include firstboot script to (re)generate DB connection & api secret on
+    firstboot.
+
+  * Explicitly install composer via Makefile (rather than automatically include
+    in all LAMP based appliances) - part of #1563.
+
+  * Note: Please refer to turnkey-core's 16.1 changelog for changes common to
+    all appliances. Here we only describe changes specific to this appliance.
+
+ -- Jeremy Davis <jeremy@turnkeylinux.org>  Tue, 20 Apr 2021 14:19:58 +1000
+
 turnkey-laravel-16.0 (1) turnkey; urgency=low
 
   * Update to Laravel to latest LTS version - 6.18.8.
