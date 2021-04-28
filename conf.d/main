@@ -38,7 +38,7 @@ a2enmod rewrite
 
 # Set Laravel configuration
 sed -i '\|^APP_NAME=| s|=.*|="TurnKey Laravel"|' $WEBROOT/.env
-sed -i "\|^DB_USERNAME=|=.*|=$DB_USER|" $WEBROOT/.env
+sed -i "\|^DB_USERNAME=| s|=.*|=$DB_USER|" $WEBROOT/.env
 sed -i "\|^DB_PASSWORD=| s|=.*|=$DB_PASS|" $WEBROOT/.env
 
 # tweak laravel landing page
