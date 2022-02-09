@@ -1,3 +1,14 @@
+turnkey-laravel-17.0 (1) turnkey; urgency=low
+
+  * Update to Laravel to latest LTS version - 8.83.0.
+
+  * Update Composer to 2.2.26.
+
+  * Note: Please refer to turnkey-core's 17.0 changelog for changes common to
+    all appliances. Here we only describe changes specific to this appliance.
+
+ -- Zhenya Hvorostian <zhenya@turnkeylinux.org>  Wed, 09 Feb 2022 19:56:40 +0300
+
 turnkey-laravel-16.1 (1) turnkey; urgency=low
 
   * Update to Laravel to latest LTS version - 6.20.0.
