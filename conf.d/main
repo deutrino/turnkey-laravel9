@@ -45,5 +45,5 @@ sed -i "\|^DB_PASSWORD=| s|=.*|=$DB_PASS|" $WEBROOT/.env
 # tweak laravel landing page
 WELCOME=$WEBROOT/resources/views/welcome.blade.php
 sed -i "\|laravel.com/docs| s|docs|docs/${VERSION%%.*}.x|" $WELCOME
-sed -i 's|laravel\.bigcartel\.com|turnkeylinux.com|' $WELCOME
+sed -i 's|laravel\.bigcartel\.com|turnkeylinux.org|' $WELCOME
 sed -i 's|Shop|TurnKey Linux|' $WELCOME
