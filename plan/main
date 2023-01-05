@@ -1,7 +1,7 @@
 #include <turnkey/base>
-#include <turnkey/lamp>
+#include <turnkey/lamp81>
 
 php-pear
-php-xml
-php-mbstring
-php-curl
+php8.1-xml
+php8.1-mbstring
+php8.1-curl
