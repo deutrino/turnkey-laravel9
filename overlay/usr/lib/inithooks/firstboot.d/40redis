@@ -1,0 +1,11 @@
+#!/bin/bash -e
+
+. /etc/default/inithooks
+
+[ -e $INITHOOKS_CONF ] && . $INITHOOKS_CONF
+
+APP_IP_BIND="localhost"
+APP_PROTECTED="yes"
+
+$INITHOOKS_PATH/bin/redis.py \
+    --bind="$APP_IP_BIND" --protected_mode="$APP_PROTECTED"
